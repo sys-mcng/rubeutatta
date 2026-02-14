@@ -1,180 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>推し曲アーカイブ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 重要 -->
-  <style>
-    :root {
-      --bg: #0f0f12;
-      --card: #16181d;
-      --text: #e9ecf1;
-      --muted: #a7b0bc;
-      --accent: #5aa0ff;
-    }
-    body {
-      margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-      background: var(--bg); color: var(--text);
-    }
-    header { padding: 16px; border-bottom: 1px solid #24262b; position: sticky; top: 0; background: rgba(15,15,18,.9); backdrop-filter: blur(6px); z-index:10;}
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
-    .filters { display: grid; gap: 12px; grid-template-columns: 1fr; }
-    .filters .row { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; }
-    .filters label { font-size: 12px; color: var(--muted); display:block; }
-    .filters input, .filters select {
-      width: 100%; padding: 10px 12px; color: var(--text); background: #101217; border: 1px solid #262a31; border-radius: 8px;
-    }
-    .grid { display: grid; gap: 12px; grid-template-columns: 1fr; margin-top: 16px; }
-    .card {
-      background: var(--card); border: 1px solid #24262b; border-radius: 12px; padding: 14px;
-    }
-    .meta { color: var(--muted); font-size: 12px; display:flex; gap:12px; flex-wrap:wrap; }
-    .title { font-weight: 600; margin: 6px 0 4px; }
-    .tags { display:flex; gap:6px; flex-wrap:wrap; }
-    .tag { font-size: 11px; color: #cfe1ff; background: #1b2740; border: 1px solid #2a3b64; padding: 2px 6px; border-radius: 999px;}
-    .links a { color: var(--accent); text-decoration: none; margin-right: 10px; }
-
-    /* PC向け */
-    @media (min-width: 768px) {
-      .filters { grid-template-columns: 2fr 1fr 1fr; align-items: end; }
-      .filters .row { grid-template-columns: 1fr 1fr; }
-      .grid { grid-template-columns: repeat(3, 1fr); }
-      .card { padding: 16px; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>推し歌まとめ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <strong>推し曲アーカイブ</strong>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <!-- フィルタ -->
-    <section class="filters" aria-label="検索とフィルター">
-      <div>
-        <label for="q">キーワード（曲名・イベント・メモ）</label>
-        <input id="q" name="q" type="search" placeholder="例）アンビエント / Winter / カバー">
-      </div>
-      <div class="row">
-        <div>
-          <label for="type">種別</label>
-          <select id="type" name="type">
-            <option value="">すべて</option>
-            <option value="original">オリジナル</option>
-            <option value="cover">カバー</option>
-            <option value="live">ライブ</option>
-          </select>
-        </div>
-        <div>
-          <label for="lang">言語</label>
-          <select id="lang" name="lang">
-            <option value="">すべて</option>
-            <option value="ja">日本語</option>
-            <option value="en">英語</option>
-            <option value="other">その他</option>
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div>
-          <label for="from">開始日</label>
-          <input id="from" name="from" type="date">
-        </div>
-        <div>
-          <label for="to">終了日</label>
-          <input id="to" name="to" type="date">
-        </div>
+<body>
+<header class="site-header">
+  <div class="site-title-area">
+    <h1 class="site-title">るべうたアーカイブ</h1>
+    <p class="site-subtitle">
+	にじさんじ所属 星導ショウさんの非公式ファンサイトです。<br>
+	今までに歌った歌、ボイスをまとめています。</p>
+  </div>
+  <nav class="main-nav">
+    <button class="nav-tab active" data-tab="tab-home">トップ</button>
+    <button class="nav-tab" data-tab="tab-songs">歌まとめ</button>
+    <button class="nav-tab" data-tab="tab-voices">ボイスまとめ</button>
+    <button class="nav-tab" data-tab="tab-contact">問い合わせ</button>
+  </nav>
+</header>
+
+<main class="main-content">
+  <!-- トップページ -->
+  <section id="tab-home" class="tab-panel active">
+    <section class="home-section">
+      <h2>推し紹介</h2>
+      <p class="oshi-intro">
+        なんでも見るが、なんにも分からない鑑定士。<br>
+        宇宙の全てを受け入れようとした結果、自分自身の素性もわからなくなってしまった。
+      </p>
+    </section>
+
+    <section class="home-section">
+      <h2>最新動画</h2>
+      <div class="card">
+        <p class="card-title">最新歌ってみた動画</p>
+        <a href="https://youtu.be/ofvAnbqmdHE?si=nPJv_CF_e-yU93p0/" target="_blank" rel="noopener" class="card-link">
+          YouTubeで見る
+        </a>
       </div>
     </section>
 
-    <!-- 件数 -->
-    <p id="count" style="margin-top:12px;color:#a7b0bc;">読み込み中…</p>
+    <section class="home-section">
+      <h2>最新グッズ情報</h2>
+      <div class="card">
+        <p class="card-title">誕生日記念グッズ 2026</p>
+        <ul class="card-list">
+          <li>描き下ろしアクリルスタンド</li>
+          <li>記念ボイスセット</li>
+          <li>フルカラータペストリー</li>
+        </ul>
+        <a href="#" class="card-link">公式ショップへ</a>
+      </div>
+    </section>
+  </section>
 
-    <!-- リスト -->
-    <section id="list" class="grid" aria-live="polite"></section>
-  </main>
+  <!-- 歌まとめ -->
+  <section id="tab-songs" class="tab-panel">
+    <div class="songs-layout">
+      <!-- 左：テーブル -->
+      <section class="songs-table-area">
+        <h2>歌一覧</h2>
+        <div class="table-wrapper">
+          <table id="songs-table">
+            <thead>
+              <tr>
+                <th>曲名</th>
+                <th>アーティスト</th>
+                <th>歌唱日</th>
+                <th>コラボ相手</th>
+                <th>タグ</th>
+                <th>動画</th>
+              </tr>
+            </thead>
+            <tbody id="songs-tbody">
+              <!-- JSで挿入 -->
+            </tbody>
+          </table>
+        </div>
+        <p class="result-count" id="result-count"></p>
+      </section>
 
-  <script>
-    /** データ読み込み */
-    let SONGS = [];
-    async function loadSongs() {
-      const res = await fetch('./songs.json'); // 同階層に配置
-      SONGS = await res.json();
-      render();
-    }
+      <!-- 右：検索・絞り込み -->
+      <aside class="songs-filter-area">
+        <h2>検索・絞り込み</h2>
 
-    /** 正規化ヘルパー（ひらがな/カタカナ・大文字小文字も統一したい場合は拡張） */
-    function norm(s){ return (s || '').toString().toLowerCase(); }
+        <div class="filter-block">
+          <label for="keyword-input" class="filter-label">キーワード検索</label>
+          <input id="keyword-input" type="text" placeholder="曲名・アーティスト・コラボ相手など">
+        </div>
 
-    /** フィルタロジック */
-    function filterSongs() {
-      const q = norm(document.getElementById('q').value);
-      const type = document.getElementById('type').value;
-      const lang = document.getElementById('lang').value;
-      const from = document.getElementById('from').value; // 'YYYY-MM-DD' or ''
-      const to = document.getElementById('to').value;
+        <div class="filter-block">
+          <p class="filter-label">タグで絞り込み</p>
+          <div id="tag-filters" class="tag-list">
+            <!-- JSでタグボタンを生成 -->
+          </div>
+        </div>
 
-      return SONGS.filter(s => {
-        // キーワード（タイトル・原曲・イベント・メモ・タグ・アルバムを横断）
-        if (q) {
-          const hay = [
-            s.title, s.original_artist, s.event, s.notes, s.album,
-            ...(s.tags || [])
-          ].map(norm).join(' ');
-          if (!hay.includes(q)) return false;
-        }
-        if (type && s.type !== type) return false;
-        if (lang && s.language !== lang) return false;
+        <div class="filter-block">
+          <label for="date-from" class="filter-label">歌唱日（From）</label>
+          <input id="date-from" type="date">
+        </div>
 
-        // 日付範囲
-        if (from && (!s.date || s.date < from)) return false;
-        if (to && (!s.date || s.date > to)) return false;
+        <div class="filter-block">
+          <label for="date-to" class="filter-label">歌唱日（To）</label>
+          <input id="date-to" type="date">
+        </div>
 
-        return true;
-      });
-    }
+        <div class="filter-actions">
+          <button id="clear-filters" class="btn-secondary">条件をクリア</button>
+        </div>
+      </aside>
+    </div>
+  </section>
 
-    /** 描画 */
-    function render() {
-      const list = document.getElementById('list');
-      const rows = filterSongs()
-        .sort((a,b) => (b.date||'') .localeCompare(a.date||'')) // 新しい順
-        .map(s => {
-          const tags = (s.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
-          const links = (() => {
-            const arr = [];
-            if (s.links?.youtube) arr.push(`${s.links.youtube}YouTube</a>`);
-            if (s.links?.spotify) arr.push(`${s.links.spotify}Spotify</a>`);
-            if (s.links?.x_post) arr.push(`${s.links.x_post}X</a>`);
-            return arr.join('');
-          })();
-          return `
-            <article class="card">
-              <div class="meta">${s.date ? s.date : '日付不明'}・${s.type || '種別不明'}・${s.language || '-'}</div>
-              <h3 class="title">${s.title}</h3>
-              <div class="meta">${s.original_artist ? `原曲: ${s.original_artist}` : ''} ${s.event ? `／ ${s.event}` : ''} ${s.album ? `／ ${s.album}` : ''}</div>
-              ${tags ? `<div class="tags" aria-label="タグ">${tags}</div>` : ''}
-              ${s.notes ? `<p style="margin:10px 0;">${s.notes}</p>` : ''}
-              <div class="links">${links}</div>
-            </article>
-          `;
-        }).join('');
+  <!-- ボイスまとめ（ダミー構成） -->
+  <section id="tab-voices" class="tab-panel">
+    <h2>ボイスまとめ</h2>
+    <p>ここにボイス販売・配布の一覧やリンクをまとめることができます。</p>
+    <ul class="simple-list">
+      <li>誕生日記念ボイス 2025</li>
+      <li>季節ボイス（春）</li>
+      <li>ASMR配信アーカイブ など</li>
+    </ul>
+  </section>
 
-      list.innerHTML = rows || `<p style="color:#a7b0bc;">該当する曲がありません。</p>`;
-      document.getElementById('count').textContent = `表示件数：${filterSongs().length} / 全 ${SONGS.length}`;
-    }
+  <!-- 問い合わせ -->
+  <section id="tab-contact" class="tab-panel">
+    <h2>問い合わせ</h2>
+    <p>サイトに関する修正依頼や連絡はこちらから。</p>
+    <form class="contact-form" onsubmit="return false;">
+      <div class="form-row">
+        <label for="contact-name">お名前</label>
+        <input id="contact-name" type="text" placeholder="ハンドルネームでもOK">
+      </div>
+      <div class="form-row">
+        <label for="contact-email">メールアドレス</label>
+        <input id="contact-email" type="email" placeholder="example@example.com">
+      </div>
+      <div class="form-row">
+        <label for="contact-message">内容</label>
+        <textarea id="contact-message" rows="5" placeholder="修正したい情報やご要望など"></textarea>
+      </div>
+      <button class="btn-primary" type="submit">送信（ダミー）</button>
+      <p class="form-note">※GitHub Pages上では実際の送信は行われません。</p>
+    </form>
+  </section>
+</main>
 
-    /** 入力のたびに更新（入力連打対策で軽いデバウンス） */
-    let t = null;
-    function onChange() { clearTimeout(t); t = setTimeout(render, 120); }
-    ['q','type','lang','from','to'].forEach(id => {
-      document.getElementById(id).addEventListener('input', onChange);
-      document.getElementById(id).addEventListener('change', onChange);
-    });
+<footer class="site-footer">
+  <p>© 推し歌アーカイブ</p>
+</footer>
 
-    loadSongs();
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
