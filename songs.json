@@ -6,7 +6,7 @@
       "date": "2023-04-29",
       "collab": "",
       "tags": ["ソロ", "歌ってみた"],
-      "videoUrl": "https://www.youtube.com/"
+      "videoUrl": "https://youtu.be/ujUhTEchPpE?si=xxjoOmi7tBI-8ixp"
     },
     {
       "title": "テレキャスタービーボーイ",
@@ -62,7 +62,7 @@
       "date": "2023-06-07",
       "collab": "",
       "tags": ["ソロ", "歌ってみた"],
-      "videoUrl": "https://www.youtube.com/"
+      "videoUrl": "https://youtu.be/jr03-xv8khM?si=PmvB6kXd2kWPZCwA"
     },
     {
       "title": "ゴーゴー幽霊船",
@@ -574,6 +574,94 @@
       "date": "2025-09-11",
       "collab": "",
       "tags": ["ソロ", "オリジナル曲"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "仮装狂騒曲",
+      "artist": "星導ショウ",
+      "date": "2025-09-11",
+      "collab": "",
+      "tags": ["ソロ", "オリジナル曲"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "シビルアイ",
+      "artist": "初星学園(倉本千奈・篠澤広・月村手毬)",
+      "date": "2025-10-25",
+      "collab": ["ジョー・力一", "周央サンゴ", "壱百満天原サロメ", "セラフ・ダズルガーデン", "栞葉るり"],
+      "tags": ["コラボ", "歌ってみた"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "地球の裏",
+      "artist": "いよわ",
+      "date": "2025-11-12",
+      "collab": "",
+      "tags": ["ソロ", "歌ってみた"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "D/N/A",
+      "artist": "Azari",
+      "date": "2025-12-09",
+      "collab": "町田ちま",
+      "tags": ["コラボ", "歌ってみた"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "おねがいダーリン",
+      "artist": "ナナホシ管弦楽団",
+      "date": "2025-12-28",
+      "collab": "赤城ウェン",
+      "tags": ["コラボ", "歌ってみた"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "ファーストキス",
+      "artist": "離婚伝説",
+      "date": "2026-02-19",
+      "collab": "",
+      "tags": ["ソロ", "歌枠"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "タナトフォビア",
+      "artist": "キタニタツヤ",
+      "date": "2026-02-19",
+      "collab": "",
+      "tags": ["ソロ", "歌枠"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "Bunny Girl",
+      "artist": "AKASAKI",
+      "date": "2026-02-19",
+      "collab": "",
+      "tags": ["ソロ", "歌枠"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "世界の秘密",
+      "artist": "Vaundy",
+      "date": "2026-02-19",
+      "collab": "",
+      "tags": ["ソロ", "歌枠"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "DOGLAND",
+      "artist": "PEOPLE1",
+      "date": "2026-02-19",
+      "collab": "",
+      "tags": ["ソロ", "歌枠"],
+      "videoUrl": "https://www.youtube.com/"
+    },
+    {
+      "title": "IRIS OUT",
+      "artist": "米津玄師",
+      "date": "2026-02-19",
+      "collab": "",
+      "tags": ["ソロ", "歌枠"],
       "videoUrl": "https://www.youtube.com/"
     }
   ]
